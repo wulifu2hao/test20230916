@@ -53,7 +53,7 @@ app.get("/", (req, res) => {
     res.sendFile(__dirname + "/public/index.html"); // Change "index.html" to the actual name of your HTML file
   });
 
-app.post("/upload", upload.single("pdfFile"), async (req, res) => {
+app.post("/upload", upload.single("imagefile"), async (req, res) => {
     try {
         const pdfBuffer = req.file.buffer;
         
